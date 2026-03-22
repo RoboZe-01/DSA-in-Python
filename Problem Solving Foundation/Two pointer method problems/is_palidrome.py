@@ -36,23 +36,67 @@ s consists only of printable ASCII characters.  """
 
 ### Method 1 : By reversing the string 
 
-def palindrome_reverse(inpt_str):
+# def palindrome_reverse(inpt_str):
 
-    # using slicing / indexing reverse the string 
-    if inpt_str == inpt_str[::-1]:
-        return True 
-    else:
-        return False
+#     # using slicing / indexing reverse the string 
+#     if inpt_str.lower() == inpt_str[::-1].lower():
+#         return True 
+#     else:
+#         return False
     
 
+# strr= input('Enter Your string here : ')
+
+# print(f'{palindrome_reverse(strr)}')
 
 
-strr= input('Enter Your string here : ')
+"""
+Above code can only handle the small words 
+it do not handle : edge cases , alpahnumeric filtering 
+"""
 
-print(f'{palindrome_reverse(strr)}')
+
+             ### Using two pointer method 
+class Solution : 
+    def valid_palindrome( self , inpt_str:str)->bool:
+
+        left , right = 0 , len(inpt_str)-1
+
+        while left<right:
 
 
+        # ignore alphanum from left 
+            while left<right and not inpt_str[left].isalnum():
+                left+=1
+            # ignore alnum from right 
+            while left <right and not inpt_str[right].isalnum():
+                right -= 1
 
+
+            # check right and left letters
+            if inpt_str[left].lower() != inpt_str[right].lower():
+                return False
+            
+            left +=1
+            right -=1
+
+        return True  
+
+# Get the input from the user 
+if __name__ == '__main__':
+    # create a instance of the solution class
+    solution = Solution()
+
+    # get the input string from the user 
+    user_str = input("Enter a String to check it it's palindrome : ")
+
+    # check if it's palindrom 
+    result = solution.valid_palindrome(user_str)
+
+    # display the results 
+    print(f' is "{user_str}" a palindrome? {result} ')
+    
+    
 
 
 
