@@ -95,6 +95,10 @@ if __name__ == '__main__':
 
     # display the results 
     print(f' is "{user_str}" a palindrome? {result} ')
+
+
+
+
     
     
 
