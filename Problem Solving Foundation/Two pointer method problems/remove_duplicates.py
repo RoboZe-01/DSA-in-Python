@@ -51,16 +51,19 @@ sorted_array_with_duplicates = [1, 1, 2, 3, 3, 3, 4, 5, 5, 6]
 
 # # apply loop 
 
-# def remove_duplicates_loop(lst):
-#     s=[]
-#     for i in lst :
-#         if i not in s:
-#             s.append(i)
-#     return s
+def remove_duplicates_loop(lst):
+    s=[]
+    for i in lst :
+         if i not in s:
+            s.append(i)
+    return s
 
 # # this gives an list with unique elements but space complexity is incresed to O(n) 
 
-# print(f'Orignical list : {sorted_array_with_duplicates} \n unique list : {remove_duplicates_loop(sorted_array_with_duplicates)}')       
+
+
+
+print(f'Orignical list : {sorted_array_with_duplicates} \n unique list : {remove_duplicates_loop(sorted_array_with_duplicates)}')       
 
 
   ## Method 2 : Using two pointer method
