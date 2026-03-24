@@ -80,7 +80,7 @@ print(f'solution using square and sort method : {square_and_sort(nums)}')
 
 def square_merge_sort(arr):
     
-    a = [x*x for x in arr if x<0]  ## Negative arr square
+    a = [x*x for x in arr if x<0][::-1]  ## Negative arr square
   
     b = [y*y for y in arr if y>=0]     ## positive arr square
     i = 0
