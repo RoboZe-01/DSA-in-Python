@@ -29,3 +29,19 @@ Follow up: Squaring each element and sorting the new array is very trivial, coul
 
 
 """
+
+
+   ## Brute force approach ( using timsort )
+
+"""
+In this approach i am ignoring the sign ( positive or negative ) then square them and new array will be sorted
+
+
+   """
+
+nums = [-10, -7, -3, -1, 0, 2, 4, 6, 8, 9]            # example array 
+nums.sort(key=abs)
+print(nums)
+
+
+ 
