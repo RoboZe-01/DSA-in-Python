@@ -40,8 +40,29 @@ In this approach i am ignoring the sign ( positive or negative ) then square the
    """
 
 nums = [-10, -7, -3, -1, 0, 2, 4, 6, 8, 9]            # example array 
-nums.sort(key=abs)
-print(nums)
+# nums.sort(key=abs)
+# print(nums)
+
+def square_sort(arr):
+    arr.sort(key=abs)
+    square_arr = []
+    for a in range(0,len(arr)):
+        square_arr.append(arr[a]*arr[a])
+    return square_arr
+
+
+print(f'sorted square array is {square_sort(nums)}')
+
+
+
+## solution using list comprehension 
+
+def square_arr_compre(arr):
+    arr.sort(key=abs)
+    arr = [i*i for i in arr]
+    return arr
+
+print(f'solution using list comprehenstion : {square_arr_compre(nums)}')
 
 
  
