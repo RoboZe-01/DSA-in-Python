@@ -39,7 +39,7 @@ In this approach i am ignoring the sign ( positive or negative ) then square the
 
    """
 
-nums = [-10, -7, -3, -1, 0, 2, 4, 6, 8, 9]            # example array 
+nums = 	[-5, -3, -2, -1, 0, 1, 4, 5, 7, 10]       # example array 
 # nums.sort(key=abs)
 # print(nums)
 
@@ -63,6 +63,58 @@ def square_arr_compre(arr):
     return arr
 
 print(f'solution using list comprehenstion : {square_arr_compre(nums)}')
+
+
+## Solving using square and sort method
+
+def square_and_sort(arr):
+    arr = [i*i for i in arr]
+    arr.sort()
+    return arr
+
+print(f'solution using square and sort method : {square_and_sort(nums)}')
+
+
+
+## using Merge sort and two pointer 
+
+def square_merge_sort(arr):
+    
+    a = [x*x for x in arr if x<0]  ## Negative arr square
+  
+    b = [y*y for y in arr if y>=0]     ## positive arr square
+    i = 0
+    j = 0
+    merge_arr=[]
+   
+    
+   
+#  # compare the values from a and b at index i and j
+    while i < len(a) and j < len(b):
+        if a[i]<b[j]:
+            merge_arr.append(a[i])
+            i+=1
+            
+        else : 
+            merge_arr.append(b[j])
+            
+            j+=1
+           
+
+    # condition when a values are finished 
+    while i < len(a) :
+        merge_arr.append(a[i])
+        
+        i+=1
+    while j<len(b):
+        merge_arr.append(b[j])
+        
+        j+=1
+    return merge_arr               
+
+
+print(f'using merge sort : {square_merge_sort(nums)}')
+
 
 
  
