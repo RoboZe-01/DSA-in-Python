@@ -6,7 +6,7 @@ answer[i] == "FizzBuzz" if i is divisible by 3 and 5.
 answer[i] == "Fizz" if i is divisible by 3.
 answer[i] == "Buzz" if i is divisible by 5.
 answer[i] == i (as a string) if none of the above conditions are true.
- 
+ 4`
 
 Example 1:
 
@@ -27,3 +27,14 @@ Constraints:
 1 <= n <= 104
 
 """
+
+# initialising the empty list and taking input length of the lenght of list
+lst = []
+n = int(input("Enter the length of the list your want : "))
+for i in range(0,n+1):
+    lst.append(i)
+if     
+
+print(lst)    
+
+
