@@ -15,8 +15,10 @@ class Student:
         self.course = course
 
 
-student1 = Student()
-student1.name =
-print(student1.name)
+student1 = Student("Prem",22,"Me")
+student2 = Student("Rahul",20, "BE-MECH")
+
+print(student1)
+print(student2)
 
 
